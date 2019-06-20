@@ -47,13 +47,13 @@
 To **install** or **update** nvm, you can use the [install script][2] using cURL:
 
 ```sh
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/appannie/nvm/v0.34.0/install.sh | bash
 ```
 
 or Wget:
 
 ```sh
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/appannie/nvm/v0.34.0/install.sh | bash
 ```
 
 <sub>The script clones the nvm repository to `~/.nvm` and adds the source line to your profile (`~/.bash_profile`, `~/.zshrc`, `~/.profile`, or `~/.bashrc`).</sub>
@@ -99,7 +99,7 @@ If the above doesn't fix the problem, open your `.bash_profile` and add the foll
 ```
 - name: nvm
   shell: >
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/appannie/nvm/v0.34.0/install.sh | bash
   args:
     creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
 ```
@@ -157,7 +157,7 @@ Homebrew installation is not supported. If you have issues with homebrew-install
 If you have `git` installed (requires git v1.7.10+):
 
 1. clone this repo in the root of your user profile
-  - `cd ~/` from anywhere then `git clone https://github.com/nvm-sh/nvm.git .nvm`
+  - `cd ~/` from anywhere then `git clone https://github.com/appannie/nvm.git .nvm`
 1. `cd ~/.nvm` and check out the latest version with `git checkout v0.34.0`
 1. activate nvm by sourcing it from your shell: `. nvm.sh`
 
@@ -176,7 +176,7 @@ For a fully manual install, execute the following lines to first clone the nvm r
 
 ```sh
 export NVM_DIR="$HOME/.nvm" && (
-  git clone https://github.com/nvm-sh/nvm.git "$NVM_DIR"
+  git clone https://github.com/appannie/nvm.git "$NVM_DIR"
   cd "$NVM_DIR"
   git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 ) && \. "$NVM_DIR/nvm.sh"
@@ -629,7 +629,7 @@ If installing nvm on Alpine Linux *is* still what you want or need to do, you sh
 
 ```sh
 apk add -U curl bash ca-certificates openssl ncurses coreutils python2 make gcc g++ libgcc linux-headers grep util-linux binutils findutils
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/appannie/nvm/v0.34.0/install.sh | bash
 ```
 
 The Node project has some desire but no concrete plans (due to the overheads of building, testing and support) to offer Alpine-compatible binaries.
@@ -714,9 +714,9 @@ sudo chmod ugo-x /usr/libexec/path_helper
 
 More on this issue in [dotphiles/dotzsh](https://github.com/dotphiles/dotzsh#mac-os-x).
 
-[1]: https://github.com/nvm-sh/nvm.git
-[2]: https://github.com/nvm-sh/nvm/blob/v0.34.0/install.sh
+[1]: https://github.com/appannie/nvm.git
+[2]: https://github.com/appannie/nvm/blob/v0.34.0/install.sh
 [3]: https://travis-ci.org/nvm-sh/nvm
-[4]: https://github.com/nvm-sh/nvm/releases/tag/v0.34.0
+[4]: https://github.com/appannie/nvm/releases/tag/v0.34.0
 [Urchin]: https://github.com/scraperwiki/urchin
 [Fish]: http://fishshell.com
